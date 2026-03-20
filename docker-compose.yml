@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  comfyui:
+  llama-server:
     image: ghcr.io/ggml-org/llama.cpp:server-cuda
     container_name: llama-server
     ports:
