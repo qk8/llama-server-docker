@@ -12,7 +12,6 @@ services:
       -m /models/Qwen3.5-9B-Q8_0.gguf
       --port 8080
       --host 0.0.0.0
-      -n 512
     deploy:
       resources:
         reservations:
