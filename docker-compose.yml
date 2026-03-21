@@ -9,7 +9,8 @@ services:
     volumes:
       - ~/containers/llama-server/models:/models
     command: >
-      -m /models/Qwen3.5-9B-Q8_0.gguf
+      -m /models/Qwen3.5-27B-Q3_K_M.gguf
+      --n-gpu-layers all
       --port 8080
       --host 0.0.0.0
     deploy:
