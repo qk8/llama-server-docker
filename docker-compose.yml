@@ -9,8 +9,7 @@ services:
     volumes:
       - ~/containers/llama-server/models:/models
     command: >
-      -m /models/Qwen3.5-27B-UD-IQ3_XXS.gguf
-      --n-gpu-layers all
+      -m /models/Qwen3.5-27B-IQ4_XS.gguf
       --ctx-size 32768
       --cache-type-k q8_0
       --cache-type-v q8_0
