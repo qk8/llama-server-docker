@@ -11,7 +11,7 @@ services:
     command: >
       -m /models/Qwen3.5-27B-Q3_K_M.gguf
       --n-gpu-layers all
-      --ctx-size 16384
+      --ctx-size 32768
       --cache-type-k q8_0
       --cache-type-v q8_0
       --temp 0.6
