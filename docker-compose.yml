@@ -21,7 +21,6 @@ services:
       --presence-penalty 0.0
       --repeat-penalty 1.0
       --flash-attn on
-      --swa-full
       --no-context-shift
       --jinja
       --port 8080
