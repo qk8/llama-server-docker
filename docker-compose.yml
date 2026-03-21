@@ -11,6 +11,15 @@ services:
     command: >
       -m /models/Qwen3.5-27B-Q3_K_M.gguf
       --n-gpu-layers all
+      --ctx-size 16384
+      --cache-type-k q8_0
+      --cache-type-v q8_0
+      --temp 0.6
+      --top-p 0.95
+      --top-k 20
+      --min-p 0.0
+      --presence-penalty 0.0
+      --repeat-penalty 1.0
       --port 8080
       --host 0.0.0.0
     deploy:
