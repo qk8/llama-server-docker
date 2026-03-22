@@ -9,7 +9,7 @@ services:
     volumes:
       - ~/containers/llama-server/models:/models
     command: >
-      -m /models/Qwen3.5-27B-IQ4_XS.gguf
+      -m /models/Qwen3.5-35B-A3B-UD-IQ4_XS.gguf
       --fit on
       --fit-ctx 32768
       --cache-type-k q8_0
