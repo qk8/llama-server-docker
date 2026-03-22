@@ -11,9 +11,9 @@ services:
     command: >
       -m /models/Qwen3.5-35B-A3B-UD-IQ4_XS.gguf
       --fit on
-      --fit-ctx 32768
+      --fit-ctx 262144
       --n-gpu-layers 999
-      --n-cpu-moe 8
+      --n-cpu-moe 16
       --cache-type-k q8_0
       --cache-type-v q8_0
       --temp 0.6
