@@ -25,6 +25,7 @@ services:
       --repeat-penalty 1.0
       --flash-attn on
       --no-context-shift
+      --swa-full
       --jinja
       --parallel 1
       --timeout 600
