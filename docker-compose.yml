@@ -24,6 +24,9 @@ services:
       --flash-attn on
       --no-context-shift
       --jinja
+      --parallel 1
+      --timeout 600
+      --keep 1024
       --port 8080
       --host 0.0.0.0
     deploy:
