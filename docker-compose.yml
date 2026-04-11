@@ -25,6 +25,7 @@ services:
       --flash-attn on
       --no-context-shift
       --cache-ram 0
+      --ctx-checkpoints 1
       --no-clear-idle
       --no-mmap
       --jinja
