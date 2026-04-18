@@ -28,7 +28,6 @@ services:
       --ctx-checkpoints 1
       --no-clear-idle
       --jinja
-      --parallel 1
       --timeout 600
       --port 8080
       --host 0.0.0.0
