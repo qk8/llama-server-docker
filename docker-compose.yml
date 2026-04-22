@@ -36,8 +36,6 @@ services:
         reservations:
           devices:
             - capabilities: [gpu]
-    networks:
-      - llama-server-internal
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,utility
@@ -49,7 +47,3 @@ services:
       - ALL
 
     restart: unless-stopped
-
-networks:
-  llama-server-internal:
-    internal: true
