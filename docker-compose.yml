@@ -9,6 +9,7 @@ services:
     command: >
       -m /models/Qwen3.6-35B-A3B/Qwen3.6-35B-A3B-UD-IQ4_NL_XL.gguf
       --mmproj /models/Qwen3.6-35B-A3B/mmproj-F16.gguf
+      --no-mmproj-offload
       --fit on
       --ctx-size 262144
       --n-gpu-layers 999
@@ -26,6 +27,10 @@ services:
       --no-context-shift
       --cache-ram 0
       --ctx-checkpoints 1
+      --spec-type ngram-mod
+      --spec-ngram-size-n 16
+      --draft-min 16
+      --draft-max 64
       --no-clear-idle
       --jinja
       --timeout 600
