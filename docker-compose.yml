@@ -28,10 +28,9 @@ services:
       --cache-ram 0
       --ctx-checkpoints 1
       --spec-type ngram-mod
-      --spec-ngram-size-n 16
-      --draft-min 16
-      --draft-max 64
-      --no-clear-idle
+      --spec-ngram-mod-n-match 16
+      --spec-ngram-mod-n-min 16
+      --spec-ngram-mod-n-max 64
       --jinja
       --timeout 600
       --port 8080
