@@ -14,8 +14,8 @@ services:
       --ctx-size 200000
       --n-gpu-layers 999
       --n-cpu-moe 24
-      --batch-size 256
-      --ubatch-size 128
+      --batch-size 128
+      --ubatch-size 64
       --kv-unified
       --cache-type-k q8_0
       --cache-type-v q8_0
@@ -29,10 +29,6 @@ services:
       --no-context-shift
       --cache-ram 0
       --ctx-checkpoints 1
-      --spec-type ngram-mod
-      --spec-ngram-mod-n-match 20
-      --spec-ngram-mod-n-min 20
-      --spec-ngram-mod-n-max 64
       --jinja
       --timeout 600
       --port 8080
