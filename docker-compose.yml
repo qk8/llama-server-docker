@@ -28,6 +28,8 @@ services:
       --cache-ram 0
       --ctx-checkpoints 1
       --jinja
+      --parallel 1
+      --no-cont-batching
       --timeout 600
       --port 8080
       --host 0.0.0.0
