@@ -1,0 +1,48 @@
+services:
+  llama-server:
+    image: ghcr.io/ggml-org/llama.cpp:server-cuda
+    container_name: llama-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ~/containers/llama-server/models:/models
+    command: >
+      -m /models/gemma-4-E4B/gemma-4-E4B-it-UD-Q4_K_XL.gguf
+      --fit off
+      --ctx-size 8192
+      --n-gpu-layers all
+      --kv-unified
+      --cache-type-k q8_0
+      --cache-type-v q8_0
+      --temp 1.0
+      --top-p 0.95
+      --top-k 20
+      --min-p 0.0
+      --presence-penalty 0.0
+      --repeat-penalty 1.0
+      --flash-attn on
+      --no-context-shift
+      --cache-ram 0
+      --ctx-checkpoints 1
+      --jinja
+      --parallel 1
+      --no-cont-batching
+      --timeout 600
+      --port 8080
+      --host 0.0.0.0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+
+    security_opt:
+      - no-new-privileges:true
+
+    cap_drop:
+      - ALL
+
+    restart: unless-stopped
