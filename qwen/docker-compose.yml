@@ -9,7 +9,7 @@ services:
     command: >
       -m /models/Qwen3.8-27B/Qwen3.8-27B-UD-IQ3_XXS.gguf
       --fit off
-      --ctx-size 90000
+      --ctx-size 110000
       --n-gpu-layers 999
       --kv-unified
       --cache-type-k q8_0
